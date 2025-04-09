@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Friends Translations</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #f8f8f8; padding: 20px; }
+    .line { cursor: pointer; padding: 10px; border-bottom: 1px solid #ddd; }
+    .line:hover { background-color: #eef; }
+  </style>
+</head>
+<body>
+
+  <h2>Friends - The One Where Ross and Rachel Take A Break</h2>
+
+  <div class="line" onclick="toggleTranslation(this)" data-en="Joey: Hey, how much will you give me to eat this whole jar of olives?" data-pt="Joey: Ei, quanto você me dá se eu comer esse pote inteiro de azeitonas?">
+    Joey: Hey, how much will you give me to eat this whole jar of olives?
+  </div>
+
+  <div class="line" onclick="toggleTranslation(this)" data-en="Monica: I won’t give you anything, but you’ll owe me 2.95." data-pt="Monica: Eu não vou te dar nada, mas você vai me dever 2,95.">
+    Monica: I won’t give you anything, but you’ll owe me 2.95.
+  </div>
+
+  <div class="line" onclick="toggleTranslation(this)" data-en="Phoebe: I have a date with this diplomat..." data-pt="Phoebe: Eu tenho um encontro com um diplomata...">
+    Phoebe: I have a date with this diplomat...
+  </div>
+
+  <script>
+    function toggleTranslation(element) {
+      const currentText = element.textContent;
+      const en = element.getAttribute('data-en');
+      const pt = element.getAttribute('data-pt');
+      element.textContent = currentText === en ? pt : en;
+    }
+  </script>
+
+</body>
+</html>
