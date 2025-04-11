@@ -6,141 +6,141 @@
 		<title>Friends - Todas as Temporadas e Episódios</title>
 		<style>
 			body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 20px;
-            color: #333;
+			font-family: 'Arial', sans-serif;
+			background-color: #f5f5f5;
+			margin: 0;
+			padding: 20px;
+			color: #333;
 			}
 			.container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+			max-width: 1000px;
+			margin: 0 auto;
+			background-color: white;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 			}
 			h1 {
-            color: #0066cc;
-            text-align: center;
-            margin-bottom: 30px;
+			color: #0066cc;
+			text-align: center;
+			margin-bottom: 30px;
 			}
 			.logo {
-            text-align: center;
-            margin-bottom: 30px;
+			text-align: center;
+			margin-bottom: 30px;
 			}
 			.logo img {
-            max-width: 300px;
+			max-width: 300px;
 			}
 			.seasons-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: center;
-            margin-bottom: 40px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 15px;
+			justify-content: center;
+			margin-bottom: 40px;
 			}
 			.season-card {
-            background-color: #fff;
-            border: 2px solid #0066cc;
-            border-radius: 8px;
-            padding: 15px 20px;
-            width: 150px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+			background-color: #fff;
+			border: 2px solid #0066cc;
+			border-radius: 8px;
+			padding: 15px 20px;
+			width: 150px;
+			text-align: center;
+			cursor: pointer;
+			transition: all 0.3s;
+			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 			}
 			.season-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            background-color: #e6f2ff;
+			transform: translateY(-5px);
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+			background-color: #e6f2ff;
 			}
 			.season-card.active {
-            background-color: #0066cc;
-            color: white;
+			background-color: #0066cc;
+			color: white;
 			}
 			.season-number {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 5px;
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 5px;
 			}
 			.season-year {
-            font-size: 14px;
-            margin-bottom: 5px;
+			font-size: 14px;
+			margin-bottom: 5px;
 			}
 			.season-episodes {
-            font-size: 13px;
-            color: #666;
+			font-size: 13px;
+			color: #666;
 			}
 			.season-card.active .season-episodes {
-            color: #ddd;
+			color: #ddd;
 			}
 			.episodes-container {
-            display: none;
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+			display: none;
+			background-color: white;
+			border-radius: 8px;
+			padding: 20px;
+			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 			}
 			.episodes-container.active {
-            display: block;
-            animation: fadeIn 0.5s;
+			display: block;
+			animation: fadeIn 0.5s;
 			}
 			.episode {
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
+			padding: 15px;
+			border-bottom: 1px solid #eee;
+			display: flex;
+			align-items: center;
 			}
 			.episode:last-child {
-            border-bottom: none;
+			border-bottom: none;
 			}
 			.episode-number {
-            font-weight: bold;
-            width: 50px;
-            color: #0066cc;
+			font-weight: bold;
+			width: 50px;
+			color: #0066cc;
 			}
 			.episode-title {
-            flex-grow: 1;
+			flex-grow: 1;
 			}
 			.episode-title a {
-            text-decoration: none;
-            color: #333;
+			text-decoration: none;
+			color: #333;
 			}
 			.episode-title a:hover {
-            color: #0066cc;
-            text-decoration: underline;
+			color: #0066cc;
+			text-decoration: underline;
 			}
 			.episode-date {
-            width: 100px;
-            text-align: right;
-            font-size: 14px;
-            color: #666;
+			width: 100px;
+			text-align: right;
+			font-size: 14px;
+			color: #666;
 			}
 			@keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+			from { opacity: 0; }
+			to { opacity: 1; }
 			}
 			.season-title {
-            color: #0066cc;
-            margin-top: 0;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #0066cc;
+			color: #0066cc;
+			margin-top: 0;
+			padding-bottom: 10px;
+			border-bottom: 2px solid #0066cc;
 			}
 			@media (max-width: 768px) {
-            .season-card {
+			.season-card {
 			width: 120px;
 			padding: 12px 15px;
-            }
-            .episode {
+			}
+			.episode {
 			flex-direction: column;
 			align-items: flex-start;
-            }
-            .episode-date {
+			}
+			.episode-date {
 			text-align: left;
 			width: auto;
 			margin-top: 5px;
-            }
+			}
 			}
 		</style>
 	</head>
@@ -188,95 +188,261 @@
 				season2: {
 					title: "Temporada 2 (1995-1996)",
 					episodes: [
-    { number: "2x01", title: "The One With Ross's New Girlfriend", shortTitle: "Ross's New Girlfriend", date: "21/09/1995" },
-    { number: "2x02", title: "The One With the Breast Milk", shortTitle: "The Breast Milk", date: "28/09/1995" },
-    { number: "2x03", title: "The One Where Heckles Dies", shortTitle: "Heckles Dies", date: "05/10/1995" },
-    { number: "2x04", title: "The One With Phoebe's Husband", shortTitle: "Phoebe's Husband", date: "12/10/1995" },
-    { number: "2x05", title: "The One With Five Steaks and an Eggplant", shortTitle: "Five Steaks and an Eggplant", date: "19/10/1995" },
-    { number: "2x06", title: "The One With the Baby on the Bus", shortTitle: "The Baby on the Bus", date: "02/11/1995" },
-    { number: "2x07", title: "The One Where Ross Finds Out", shortTitle: "Ross Finds Out", date: "09/11/1995" },
-    { number: "2x08", title: "The One With the List", shortTitle: "The List", date: "16/11/1995" },
-    { number: "2x09", title: "The One With Phoebe's Dad", shortTitle: "Phoebe's Dad", date: "14/12/1995" },
-    { number: "2x10", title: "The One With Russ", shortTitle: "Russ", date: "04/01/1996" },
-    { number: "2x11", title: "The One With the Lesbian Wedding", shortTitle: "The Lesbian Wedding", date: "18/01/1996" },
-    { number: "2x12", title: "The One After the Superbowl, Part 1", shortTitle: "Superbowl, Part 1", date: "28/01/1996" },
-    { number: "2x13", title: "The One After the Superbowl, Part 2", shortTitle: "Superbowl, Part 2", date: "28/01/1996" },
-    { number: "2x14", title: "The One With the Prom Video", shortTitle: "The Prom Video", date: "01/02/1996" },
-    { number: "2x15", title: "The One Where Ross and Rachel... You Know", shortTitle: "Ross and Rachel", date: "08/02/1996" },
-    { number: "2x16", title: "The One Where Joey Moves Out", shortTitle: "Joey Moves Out", date: "15/02/1996" },
-    { number: "2x17", title: "The One Where Eddie Moves In", shortTitle: "Eddie Moves In", date: "22/02/1996" },
-    { number: "2x18", title: "The One Where Dr. Ramoray Dies", shortTitle: "Dr. Ramoray Dies", date: "21/03/1996" },
-    { number: "2x19", title: "The One Where Eddie Won't Go", shortTitle: "Eddie Won't Go", date: "28/03/1996" },
-    { number: "2x20", title: "The One Where Old Yeller Dies", shortTitle: "Old Yeller Dies", date: "04/04/1996" },
-    { number: "2x21", title: "The One With the Bullies", shortTitle: "The Bullies", date: "25/04/1996" },
-    { number: "2x22", title: "The One With the Two Parties", shortTitle: "The Two Parties", date: "02/05/1996" },
-    { number: "2x23", title: "The One With the Chicken Pox", shortTitle: "The Chicken Pox", date: "09/05/1996" },
-    { number: "2x24", title: "The One With Barry and Mindy's Wedding", shortTitle: "Barry and Mindy's Wedding", date: "16/05/1996" }
-  ]
+					{ number: "2x01", title: "The One With Ross's New Girlfriend", shortTitle: "Ross's New Girlfriend", date: "21/09/1995" },
+					{ number: "2x02", title: "The One With the Breast Milk", shortTitle: "The Breast Milk", date: "28/09/1995" },
+					{ number: "2x03", title: "The One Where Heckles Dies", shortTitle: "Heckles Dies", date: "05/10/1995" },
+					{ number: "2x04", title: "The One With Phoebe's Husband", shortTitle: "Phoebe's Husband", date: "12/10/1995" },
+					{ number: "2x05", title: "The One With Five Steaks and an Eggplant", shortTitle: "Five Steaks and an Eggplant", date: "19/10/1995" },
+					{ number: "2x06", title: "The One With the Baby on the Bus", shortTitle: "The Baby on the Bus", date: "02/11/1995" },
+					{ number: "2x07", title: "The One Where Ross Finds Out", shortTitle: "Ross Finds Out", date: "09/11/1995" },
+					{ number: "2x08", title: "The One With the List", shortTitle: "The List", date: "16/11/1995" },
+					{ number: "2x09", title: "The One With Phoebe's Dad", shortTitle: "Phoebe's Dad", date: "14/12/1995" },
+					{ number: "2x10", title: "The One With Russ", shortTitle: "Russ", date: "04/01/1996" },
+					{ number: "2x11", title: "The One With the Lesbian Wedding", shortTitle: "The Lesbian Wedding", date: "18/01/1996" },
+					{ number: "2x12", title: "The One After the Superbowl, Part 1", shortTitle: "Superbowl, Part 1", date: "28/01/1996" },
+					{ number: "2x13", title: "The One After the Superbowl, Part 2", shortTitle: "Superbowl, Part 2", date: "28/01/1996" },
+					{ number: "2x14", title: "The One With the Prom Video", shortTitle: "The Prom Video", date: "01/02/1996" },
+					{ number: "2x15", title: "The One Where Ross and Rachel... You Know", shortTitle: "Ross and Rachel", date: "08/02/1996" },
+					{ number: "2x16", title: "The One Where Joey Moves Out", shortTitle: "Joey Moves Out", date: "15/02/1996" },
+					{ number: "2x17", title: "The One Where Eddie Moves In", shortTitle: "Eddie Moves In", date: "22/02/1996" },
+					{ number: "2x18", title: "The One Where Dr. Ramoray Dies", shortTitle: "Dr. Ramoray Dies", date: "21/03/1996" },
+					{ number: "2x19", title: "The One Where Eddie Won't Go", shortTitle: "Eddie Won't Go", date: "28/03/1996" },
+					{ number: "2x20", title: "The One Where Old Yeller Dies", shortTitle: "Old Yeller Dies", date: "04/04/1996" },
+					{ number: "2x21", title: "The One With the Bullies", shortTitle: "The Bullies", date: "25/04/1996" },
+					{ number: "2x22", title: "The One With the Two Parties", shortTitle: "The Two Parties", date: "02/05/1996" },
+					{ number: "2x23", title: "The One With the Chicken Pox", shortTitle: "The Chicken Pox", date: "09/05/1996" },
+					{ number: "2x24", title: "The One With Barry and Mindy's Wedding", shortTitle: "Barry and Mindy's Wedding", date: "16/05/1996" }
+					]
 				},
 				season3: {
-    title: "Temporada 3 (1996-1997)",
-    episodes: [
-      { number: "3x01", title: "The One With The Princess Leia Fantasy", shortTitle: "Princess Leia Fantasy", date: "19/09/1996" },
-      { number: "3x02", title: "The One Where No One's Ready", shortTitle: "No One's Ready", date: "26/09/1996" },
-      { number: "3x03", title: "The One With The Jam", shortTitle: "The Jam", date: "03/10/1996" },
-      { number: "3x04", title: "The One With The Metaphorical Tunnel", shortTitle: "The Metaphorical Tunnel", date: "10/10/1996" },
-      { number: "3x05", title: "The One With Frank Jr.", shortTitle: "Frank Jr.", date: "17/10/1996" },
-      { number: "3x06", title: "The One With The Flashback", shortTitle: "The Flashback", date: "31/10/1996" },
-      { number: "3x07", title: "The One With The Race Car Bed", shortTitle: "The Race Car Bed", date: "07/11/1996" },
-      { number: "3x08", title: "The One With The Giant Poking Device", shortTitle: "The Giant Poking Device", date: "14/11/1996" },
-      { number: "3x09", title: "The One With The Football", shortTitle: "The Football", date: "21/11/1996" },
-      { number: "3x10", title: "The One Where Rachel Quits", shortTitle: "Rachel Quits", date: "12/12/1996" },
-      { number: "3x11", title: "The One Where Chandler Can't Remember Which Sister", shortTitle: "Chandler's Sister", date: "09/01/1997" },
-      { number: "3x12", title: "The One With All The Jealousy", shortTitle: "All The Jealousy", date: "16/01/1997" },
-      { number: "3x13", title: "The One Where Monica And Richard Are Just Friends", shortTitle: "Monica And Richard", date: "30/01/1997" },
-      { number: "3x14", title: "The One With Phoebe's Ex-Partner", shortTitle: "Phoebe's Ex-Partner", date: "06/02/1997" },
-      { number: "3x15", title: "The One Where Ross And Rachel Take A Break", shortTitle: "Ross And Rachel Take A Break", date: "13/02/1997" },
-      { number: "3x16", title: "The One The Morning After", shortTitle: "The Morning After", date: "20/02/1997" },
-      { number: "3x17", title: "The One Without The Ski Trip", shortTitle: "The Ski Trip", date: "06/03/1997" },
-      { number: "3x18", title: "The One With The Hypnosis Tape", shortTitle: "The Hypnosis Tape", date: "13/03/1997" },
-      { number: "3x19", title: "The One With The Tiny T-Shirt", shortTitle: "The Tiny T-Shirt", date: "10/04/1997" },
-      { number: "3x20", title: "The One With The Dollhouse", shortTitle: "The Dollhouse", date: "17/04/1997" },
-      { number: "3x21", title: "The One With A Chick And A Duck", shortTitle: "The Chick And The Duck", date: "24/04/1997" },
-      { number: "3x22", title: "The One With The Screamer", shortTitle: "The Screamer", date: "01/05/1997" },
-      { number: "3x23", title: "The One With Ross's Thing", shortTitle: "Ross's Thing", date: "08/05/1997" },
-      { number: "3x24", title: "The One With The Ultimate Fighting Champion", shortTitle: "Ultimate Fighting Champion", date: "15/05/1997" },
-      { number: "3x25", title: "The One At The Beach", shortTitle: "At The Beach", date: "15/05/1997" }
-    ]
-  },
-  season4: {
-    title: "Temporada 4 (1997-1998)",
-    episodes: [
-      { number: "4x01", title: "The One With The Jellyfish", shortTitle: "The Jellyfish", date: "25/09/1997" },
-      { number: "4x02", title: "The One With The Cat", shortTitle: "The Cat", date: "02/10/1997" },
-      { number: "4x03", title: "The One With The Cuffs", shortTitle: "The Cuffs", date: "09/10/1997" },
-      { number: "4x04", title: "The One With The Ballroom Dancing", shortTitle: "Ballroom Dancing", date: "16/10/1997" },
-      { number: "4x05", title: "The One With Joey's New Girlfriend", shortTitle: "Joey's New Girlfriend", date: "30/10/1997" },
-      { number: "4x06", title: "The One With The Dirty Girl", shortTitle: "The Dirty Girl", date: "06/11/1997" },
-      { number: "4x07", title: "The One Where Chandler Crosses The Line", shortTitle: "Chandler Crosses The Line", date: "13/11/1997" },
-      { number: "4x08", title: "The One With Chandler In A Box", shortTitle: "Chandler In A Box", date: "20/11/1997" },
-      { number: "4x09", title: "The One Where They're Going To Party", shortTitle: "They're Going To Party", date: "11/12/1997" },
-      { number: "4x10", title: "The One With The Girl From Poughkeepsie", shortTitle: "Girl From Poughkeepsie", date: "18/12/1997" },
-      { number: "4x11", title: "The One With Phoebe's Uterus", shortTitle: "Phoebe's Uterus", date: "08/01/1998" },
-      { number: "4x12", title: "The One With The Embryos", shortTitle: "The Embryos", date: "15/01/1998" },
-      { number: "4x13", title: "The One With Rachel's Crush", shortTitle: "Rachel's Crush", date: "29/01/1998" },
-      { number: "4x14", title: "The One With Joey's Dirty Day", shortTitle: "Joey's Dirty Day", date: "05/02/1998" },
-      { number: "4x15", title: "The One With All The Rugby", shortTitle: "All The Rugby", date: "26/02/1998" },
-      { number: "4x16", title: "The One With The Fake Party", shortTitle: "The Fake Party", date: "19/03/1998" },
-      { number: "4x17", title: "The One With The Free Porn", shortTitle: "The Free Porn", date: "26/03/1998" },
-      { number: "4x18", title: "The One With Rachel's New Dress", shortTitle: "Rachel's New Dress", date: "02/04/1998" },
-      { number: "4x19", title: "The One With All The Haste", shortTitle: "All The Haste", date: "09/04/1998" },
-      { number: "4x20", title: "The One With All The Wedding Dresses", shortTitle: "The Wedding Dresses", date: "16/04/1998" },
-      { number: "4x21", title: "The One With The Invitation", shortTitle: "The Invitation", date: "23/04/1998" },
-      { number: "4x22", title: "The One With The Worst Best Man Ever", shortTitle: "Worst Best Man Ever", date: "30/04/1998" },
-      { number: "4x23", title: "The One With Ross's Wedding", shortTitle: "Ross's Wedding (Part 1)", date: "07/05/1998" },
-      { number: "4x24", title: "The One With Ross's Wedding - Part 2", shortTitle: "Ross's Wedding (Part 2)", date: "07/05/1998" }
-    ]
-  }
-
-			};
-			
-			
+					title: "Temporada 3 (1996-1997)",
+					episodes: [
+					{ number: "3x01", title: "The One With The Princess Leia Fantasy", shortTitle: "Princess Leia Fantasy", date: "19/09/1996" },
+					{ number: "3x02", title: "The One Where No One's Ready", shortTitle: "No One's Ready", date: "26/09/1996" },
+					{ number: "3x03", title: "The One With The Jam", shortTitle: "The Jam", date: "03/10/1996" },
+					{ number: "3x04", title: "The One With The Metaphorical Tunnel", shortTitle: "The Metaphorical Tunnel", date: "10/10/1996" },
+					{ number: "3x05", title: "The One With Frank Jr.", shortTitle: "Frank Jr.", date: "17/10/1996" },
+					{ number: "3x06", title: "The One With The Flashback", shortTitle: "The Flashback", date: "31/10/1996" },
+					{ number: "3x07", title: "The One With The Race Car Bed", shortTitle: "The Race Car Bed", date: "07/11/1996" },
+					{ number: "3x08", title: "The One With The Giant Poking Device", shortTitle: "The Giant Poking Device", date: "14/11/1996" },
+					{ number: "3x09", title: "The One With The Football", shortTitle: "The Football", date: "21/11/1996" },
+					{ number: "3x10", title: "The One Where Rachel Quits", shortTitle: "Rachel Quits", date: "12/12/1996" },
+					{ number: "3x11", title: "The One Where Chandler Can't Remember Which Sister", shortTitle: "Chandler's Sister", date: "09/01/1997" },
+					{ number: "3x12", title: "The One With All The Jealousy", shortTitle: "All The Jealousy", date: "16/01/1997" },
+					{ number: "3x13", title: "The One Where Monica And Richard Are Just Friends", shortTitle: "Monica And Richard", date: "30/01/1997" },
+					{ number: "3x14", title: "The One With Phoebe's Ex-Partner", shortTitle: "Phoebe's Ex-Partner", date: "06/02/1997" },
+					{ number: "3x15", title: "The One Where Ross And Rachel Take A Break", shortTitle: "Ross And Rachel Take A Break", date: "13/02/1997" },
+					{ number: "3x16", title: "The One The Morning After", shortTitle: "The Morning After", date: "20/02/1997" },
+					{ number: "3x17", title: "The One Without The Ski Trip", shortTitle: "The Ski Trip", date: "06/03/1997" },
+					{ number: "3x18", title: "The One With The Hypnosis Tape", shortTitle: "The Hypnosis Tape", date: "13/03/1997" },
+					{ number: "3x19", title: "The One With The Tiny T-Shirt", shortTitle: "The Tiny T-Shirt", date: "10/04/1997" },
+					{ number: "3x20", title: "The One With The Dollhouse", shortTitle: "The Dollhouse", date: "17/04/1997" },
+					{ number: "3x21", title: "The One With A Chick And A Duck", shortTitle: "The Chick And The Duck", date: "24/04/1997" },
+					{ number: "3x22", title: "The One With The Screamer", shortTitle: "The Screamer", date: "01/05/1997" },
+					{ number: "3x23", title: "The One With Ross's Thing", shortTitle: "Ross's Thing", date: "08/05/1997" },
+					{ number: "3x24", title: "The One With The Ultimate Fighting Champion", shortTitle: "Ultimate Fighting Champion", date: "15/05/1997" },
+					{ number: "3x25", title: "The One At The Beach", shortTitle: "At The Beach", date: "15/05/1997" }
+					]
+				},
+				season4: {
+					title: "Temporada 4 (1997-1998)",
+					episodes: [
+					{ number: "4x01", title: "The One With The Jellyfish", shortTitle: "The Jellyfish", date: "25/09/1997" },
+					{ number: "4x02", title: "The One With The Cat", shortTitle: "The Cat", date: "02/10/1997" },
+					{ number: "4x03", title: "The One With The Cuffs", shortTitle: "The Cuffs", date: "09/10/1997" },
+					{ number: "4x04", title: "The One With The Ballroom Dancing", shortTitle: "Ballroom Dancing", date: "16/10/1997" },
+					{ number: "4x05", title: "The One With Joey's New Girlfriend", shortTitle: "Joey's New Girlfriend", date: "30/10/1997" },
+					{ number: "4x06", title: "The One With The Dirty Girl", shortTitle: "The Dirty Girl", date: "06/11/1997" },
+					{ number: "4x07", title: "The One Where Chandler Crosses The Line", shortTitle: "Chandler Crosses The Line", date: "13/11/1997" },
+					{ number: "4x08", title: "The One With Chandler In A Box", shortTitle: "Chandler In A Box", date: "20/11/1997" },
+					{ number: "4x09", title: "The One Where They're Going To Party", shortTitle: "They're Going To Party", date: "11/12/1997" },
+					{ number: "4x10", title: "The One With The Girl From Poughkeepsie", shortTitle: "Girl From Poughkeepsie", date: "18/12/1997" },
+					{ number: "4x11", title: "The One With Phoebe's Uterus", shortTitle: "Phoebe's Uterus", date: "08/01/1998" },
+					{ number: "4x12", title: "The One With The Embryos", shortTitle: "The Embryos", date: "15/01/1998" },
+					{ number: "4x13", title: "The One With Rachel's Crush", shortTitle: "Rachel's Crush", date: "29/01/1998" },
+					{ number: "4x14", title: "The One With Joey's Dirty Day", shortTitle: "Joey's Dirty Day", date: "05/02/1998" },
+					{ number: "4x15", title: "The One With All The Rugby", shortTitle: "All The Rugby", date: "26/02/1998" },
+					{ number: "4x16", title: "The One With The Fake Party", shortTitle: "The Fake Party", date: "19/03/1998" },
+					{ number: "4x17", title: "The One With The Free Porn", shortTitle: "The Free Porn", date: "26/03/1998" },
+					{ number: "4x18", title: "The One With Rachel's New Dress", shortTitle: "Rachel's New Dress", date: "02/04/1998" },
+					{ number: "4x19", title: "The One With All The Haste", shortTitle: "All The Haste", date: "09/04/1998" },
+					{ number: "4x20", title: "The One With All The Wedding Dresses", shortTitle: "The Wedding Dresses", date: "16/04/1998" },
+					{ number: "4x21", title: "The One With The Invitation", shortTitle: "The Invitation", date: "23/04/1998" },
+					{ number: "4x22", title: "The One With The Worst Best Man Ever", shortTitle: "Worst Best Man Ever", date: "30/04/1998" },
+					{ number: "4x23", title: "The One With Ross's Wedding", shortTitle: "Ross's Wedding (Part 1)", date: "07/05/1998" },
+					{ number: "4x24", title: "The One With Ross's Wedding - Part 2", shortTitle: "Ross's Wedding (Part 2)", date: "07/05/1998" }
+					]
+				},				
+				season5: {
+					title: "Temporada 5 (1998-1999)",
+					episodes: [
+					{ number: "5x01", title: "The One After Ross Says Rachel", shortTitle: "Ross Says Rachel", date: "24/09/1998" },
+					{ number: "5x02", title: "The One With All the Kissing", shortTitle: "All The Kissing", date: "01/10/1998" },
+					{ number: "5x03", title: "The One Hundredth", shortTitle: "The One Hundredth", date: "08/10/1998" },
+					{ number: "5x04", title: "The One Where Phoebe Hates PBS", shortTitle: "Phoebe Hates PBS", date: "15/10/1998" },
+					{ number: "5x05", title: "The One With the Kips", shortTitle: "The Kips", date: "29/10/1998" },
+					{ number: "5x06", title: "The One With the Yeti", shortTitle: "The Yeti", date: "05/11/1998" },
+					{ number: "5x07", title: "The One Where Ross Moves In", shortTitle: "Ross Moves In", date: "12/11/1998" },
+					{ number: "5x08", title: "The One With All the Thanksgiving", shortTitle: "All The Thanksgiving", date: "19/11/1998" },
+					{ number: "5x09", title: "The One With Ross's Sandwich", shortTitle: "Ross's Sandwich", date: "10/12/1998" },
+					{ number: "5x10", title: "The One With the Inappropriate Sister", shortTitle: "The Inappropriate Sister", date: "17/12/1998" },
+					{ number: "5x11", title: "The One With All the Resolutions", shortTitle: "All The Resolutions", date: "07/01/1999" },
+					{ number: "5x12", title: "The One With Chandler's Work Laugh", shortTitle: "Chandler's Work Laugh", date: "21/01/1999" },
+					{ number: "5x13", title: "The One With Joey's Bag", shortTitle: "Joey's Bag", date: "04/02/1999" },
+					{ number: "5x14", title: "The One Where Everybody Finds Out", shortTitle: "Everybody Finds Out", date: "11/02/1999" },
+					{ number: "5x15", title: "The One With the Girl Who Hits Joey", shortTitle: "The Girl Who Hits Joey", date: "18/02/1999" },
+					{ number: "5x16", title: "The One With the Cop", shortTitle: "The Cop", date: "25/02/1999" },
+					{ number: "5x17", title: "The One With Rachel's Inadvertent Kiss", shortTitle: "Rachel's Inadvertent Kiss", date: "18/03/1999" },
+					{ number: "5x18", title: "The One Where Rachel Smokes", shortTitle: "Rachel Smokes", date: "08/04/1999" },
+					{ number: "5x19", title: "The One Where Ross Can't Flirt", shortTitle: "Ross Can't Flirt", date: "22/04/1999" },
+					{ number: "5x20", title: "The One With the Ride Along", shortTitle: "The Ride Along", date: "29/04/1999" },
+					{ number: "5x21", title: "The One With the Ball", shortTitle: "The Ball", date: "06/05/1999" },
+					{ number: "5x22", title: "The One With Joey's Big Break", shortTitle: "Joey's Big Break", date: "13/05/1999" },
+					{ number: "5x23", title: "The One In Vegas, Part 1", shortTitle: "Vegas, Part 1", date: "20/05/1999" },
+					{ number: "5x24", title: "The One In Vegas, Part 2", shortTitle: "Vegas, Part 2", date: "20/05/1999" }
+					]
+				},
+				season6: {
+					title: "Temporada 6 (1999-2000)",
+					episodes: [
+					{ number: "6x01", title: "The One After Vegas", shortTitle: "Vegas", date: "23/09/1999" },
+					{ number: "6x02", title: "The One Where Ross Hugs Rachel", shortTitle: "Ross Hugs Rachel", date: "30/09/1999" },
+					{ number: "6x03", title: "The One With Ross's Denial", shortTitle: "Ross's Denial", date: "07/10/1999" },
+					{ number: "6x04", title: "The One Where Joey Loses His Insurance", shortTitle: "Joey Loses His Insurance", date: "14/10/1999" },
+					{ number: "6x05", title: "The One With Joey's Porsche", shortTitle: "Joey's Porsche", date: "21/10/1999" },
+					{ number: "6x06", title: "The One On The Last Night", shortTitle: "On The Last Night", date: "04/11/1999" },
+					{ number: "6x07", title: "The One Where Phoebe Runs", shortTitle: "Phoebe Runs", date: "11/11/1999" },
+					{ number: "6x08", title: "The One With Ross's Teeth", shortTitle: "Ross's Teeth", date: "18/11/1999" },
+					{ number: "6x09", title: "The One Where Ross Got High", shortTitle: "Ross Got High", date: "25/11/1999" },
+					{ number: "6x10", title: "The One With The Routine", shortTitle: "The Routine", date: "16/12/1999" },
+					{ number: "6x11", title: "The One With The Apothecary Table", shortTitle: "The Apothecary Table", date: "06/01/2000" },
+					{ number: "6x12", title: "The One With The Joke", shortTitle: "The Joke", date: "13/01/2000" },
+					{ number: "6x13", title: "The One With Rachel's Sister", shortTitle: "Rachel's Sister", date: "03/02/2000" },
+					{ number: "6x14", title: "The One Where Chandler Can't Cry", shortTitle: "Chandler Can't Cry", date: "10/02/2000" },
+					{ number: "6x15", title: "The One That Could Have Been, Part 1", shortTitle: "That Could Have Been, Part I", date: "17/02/2000" },
+					{ number: "6x16", title: "The One That Could Have Been, Part 2", shortTitle: "That Could Have Been, Part II", date: "17/02/2000" },
+					{ number: "6x17", title: "The One With Unagi", shortTitle: "Unagi", date: "24/02/2000" },
+					{ number: "6x18", title: "The One Where Ross Dates A Student", shortTitle: "Ross Dates A Student", date: "09/03/2000" },
+					{ number: "6x19", title: "The One With Joey's Fridge", shortTitle: "Joey's Fridge", date: "23/03/2000" },
+					{ number: "6x20", title: "The One With Mac And C.H.E.E.S.E.", shortTitle: "Mac And C.H.E.E.S.E.", date: "13/04/2000" },
+					{ number: "6x21", title: "The One Where Ross Meets Elizabeth's Dad", shortTitle: "Ross Meets Elizabeth's Dad", date: "27/04/2000" },
+					{ number: "6x22", title: "The One Where Paul's The Man", shortTitle: "Paul's The Man", date: "04/05/2000" },
+					{ number: "6x23", title: "The One With The Ring", shortTitle: "The Ring", date: "11/05/2000" },
+					{ number: "6x24", title: "The One With The Proposal, Part 1", shortTitle: "The Proposal, Part I", date: "18/05/2000" },
+					{ number: "6x25", title: "The One With The Proposal, Part 2", shortTitle: "The Proposal, Part II", date: "18/05/2000" }
+					]
+				},
+				season7: {
+					title: "Temporada 7 (2000-2001)",
+					episodes: [
+					{ number: "7x01", title: "The One With Monica's Thunder", shortTitle: "Monica's Thunder", date: "12/10/2000" },
+					{ number: "7x02", title: "The One With Rachel's Book", shortTitle: "Rachel's Book", date: "12/10/2000" },
+					{ number: "7x03", title: "The One With Phoebe's Cookies", shortTitle: "Phoebe's Cookies", date: "19/10/2000" },
+					{ number: "7x04", title: "The One With Rachel's Assistant", shortTitle: "Rachel's Assistant", date: "26/10/2000" },
+					{ number: "7x05", title: "The One With The Engagement Picture", shortTitle: "The Engagement Picture", date: "02/11/2000" },
+					{ number: "7x06", title: "The One With The Nap Partners", shortTitle: "The Nap Partners", date: "09/11/2000" },
+					{ number: "7x07", title: "The One With Ross's Library Book", shortTitle: "Ross's Library Book", date: "16/11/2000" },
+					{ number: "7x08", title: "The One Where Chandler Doesn't Like Dogs", shortTitle: "Chandler Doesn't Like Dogs", date: "23/11/2000" },
+					{ number: "7x09", title: "The One With All The Candy", shortTitle: "All The Candy", date: "07/12/2000" },
+					{ number: "7x10", title: "The One With The Holiday Armadillo", shortTitle: "The Holiday Armadillo", date: "14/12/2000" },
+					{ number: "7x11", title: "The One With All The Cheesecakes", shortTitle: "All The Cheesecakes", date: "04/01/2001" },
+					{ number: "7x12", title: "The One Where They're Up All Night", shortTitle: "They're Up All Night", date: "11/01/2001" },
+					{ number: "7x13", title: "The One Where Rosita Dies", shortTitle: "Rosita Dies", date: "01/02/2001" },
+					{ number: "7x14", title: "The One Where They All Turn Thirty", shortTitle: "They All Turn Thirty", date: "08/02/2001" },
+					{ number: "7x15", title: "The One With Joey's New Brain", shortTitle: "Joey's New Brain", date: "15/02/2001" },
+					{ number: "7x16", title: "The One With The Truth About London", shortTitle: "The Truth About London", date: "22/02/2001" },
+					{ number: "7x17", title: "The One With The Cheap Wedding Dress", shortTitle: "The Cheap Wedding Dress", date: "15/03/2001" },
+					{ number: "7x18", title: "The One With Joey's Award", shortTitle: "Joey's Award", date: "29/03/2001" },
+					{ number: "7x19", title: "The One With Ross And Monica's Cousin", shortTitle: "Ross And Monica's Cousin", date: "19/04/2001" },
+					{ number: "7x20", title: "The One With Rachel's Big Kiss", shortTitle: "Rachel's Big Kiss", date: "26/04/2001" },
+					{ number: "7x21", title: "The One With The Vows", shortTitle: "The Vows", date: "03/05/2001" },
+					{ number: "7x22", title: "The One With Chandler's Dad", shortTitle: "Chandler's Dad", date: "10/05/2001" },
+					{ number: "7x23", title: "The One With Monica And Chandler's Wedding, Part 1", shortTitle: "Chandler And Monica's Wedding I", date: "17/05/2001" },
+					{ number: "7x24", title: "The One With Monica And Chandler's Wedding, Part 2", shortTitle: "Chandler And Monica's Wedding II", date: "17/05/2001" }
+					]
+				},
+				season8: {
+					title: "Temporada 8 (2001-2002)",
+					episodes: [
+					{ number: "8x01", title: "The One After 'I Do'", shortTitle: "I Do", date: "27/09/2001" },
+					{ number: "8x02", title: "The One With The Red Sweater", shortTitle: "The Red Sweater", date: "04/10/2001" },
+					{ number: "8x03", title: "The One Where Rachel Tells...", shortTitle: "Rachel Tells...", date: "11/10/2001" },
+					{ number: "8x04", title: "The One With The Videotape", shortTitle: "The Videotape", date: "18/10/2001" },
+					{ number: "8x05", title: "The One With Rachel's Date", shortTitle: "Rachel's Date", date: "25/10/2001" },
+					{ number: "8x06", title: "The One With The Halloween Party", shortTitle: "The Halloween Party", date: "01/11/2001" },
+					{ number: "8x07", title: "The One With The Stain", shortTitle: "The Stain", date: "08/11/2001" },
+					{ number: "8x08", title: "The One With The Stripper", shortTitle: "The Stripper", date: "15/11/2001" },
+					{ number: "8x09", title: "The One With The Rumor", shortTitle: "The Rumor", date: "22/11/2001" },
+					{ number: "8x10", title: "The One With Monica's Boots", shortTitle: "Monica's Boots", date: "06/12/2001" },
+					{ number: "8x11", title: "The One With Ross's Step Forward", shortTitle: "Ross's Step Forward", date: "13/12/2001" },
+					{ number: "8x12", title: "The One Where Joey Dates Rachel", shortTitle: "Joey Dates Rachel", date: "10/01/2002" },
+					{ number: "8x13", title: "The One Where Chandler Takes A Bath", shortTitle: "Chandler Takes A Bath", date: "17/01/2002" },
+					{ number: "8x14", title: "The One With The Secret Closet", shortTitle: "The Secret Closet", date: "31/01/2002" },
+					{ number: "8x15", title: "The One With The Birthing Video", shortTitle: "The Birthing Video", date: "07/02/2002" },
+					{ number: "8x16", title: "The One Where Joey Tells Rachel", shortTitle: "Joey Tells Rachel", date: "28/02/2002" },
+					{ number: "8x17", title: "The One With The Tea Leaves", shortTitle: "The Tea Leaves", date: "07/03/2002" },
+					{ number: "8x18", title: "The One In Massapequa", shortTitle: "In Massapequa", date: "28/03/2002" },
+					{ number: "8x19", title: "The One With Joey's Interview", shortTitle: "Joey's Interview", date: "04/04/2002" },
+					{ number: "8x20", title: "The One With The Baby Shower", shortTitle: "The Baby Shower", date: "25/04/2002" },
+					{ number: "8x21", title: "The One With The Cooking Class", shortTitle: "The Cooking Class", date: "02/05/2002" },
+					{ number: "8x22", title: "The One Where Rachel Is Late", shortTitle: "Rachel Is Late", date: "09/05/2002" },
+					{ number: "8x23", title: "The One Where Rachel Has A Baby, Part 1", shortTitle: "Rachel Has A Baby I", date: "16/05/2002" },
+					{ number: "8x24", title: "The One Where Rachel Has A Baby, Part 2", shortTitle: "Rachel Has A Baby II", date: "16/05/2002" }
+					]
+				},
+				season9: {
+					title: "Temporada 9 (2002-2003)",
+					episodes: [
+					{ number: "9x01", title: "The One Where No One Proposes", shortTitle: "No One Proposes", date: "26/09/2002" },
+					{ number: "9x02", title: "The One Where Emma Cries", shortTitle: "Emma Cries", date: "03/10/2002" },
+					{ number: "9x03", title: "The One With The Pediatrician", shortTitle: "The Pediatrician", date: "10/10/2002" },
+					{ number: "9x04", title: "The One With The Sharks", shortTitle: "The Sharks", date: "17/10/2002" },
+					{ number: "9x05", title: "The One With Phoebe's Birthday Dinner", shortTitle: "Phoebe's Birthday Dinner", date: "31/10/2002" },
+					{ number: "9x06", title: "The One With The Male Nanny", shortTitle: "The Male Nanny", date: "07/11/2002" },
+					{ number: "9x07", title: "The One With Ross's Inappropriate Song", shortTitle: "Ross's Inappropriate Song", date: "14/11/2002" },
+					{ number: "9x08", title: "The One With Rachel's Other Sister", shortTitle: "Rachel's Other Sister", date: "21/11/2002" },
+					{ number: "9x09", title: "The One With Rachel's Phone Number", shortTitle: "Rachel's Phone Number", date: "05/12/2002" },
+					{ number: "9x10", title: "The One With Christmas In Tulsa", shortTitle: "Christmas In Tulsa", date: "12/12/2002" },
+					{ number: "9x11", title: "The One Where Rachel Goes Back To Work", shortTitle: "Rachel Goes Back To Work", date: "09/01/2003" },
+					{ number: "9x12", title: "The One With Phoebe's Rats", shortTitle: "Phoebe's Rats", date: "16/01/2003" },
+					{ number: "9x13", title: "The One Where Monica Sings", shortTitle: "Monica Sings", date: "30/01/2003" },
+					{ number: "9x14", title: "The One With The Blind Dates", shortTitle: "The Blind Dates", date: "06/02/2003" },
+					{ number: "9x15", title: "The One With The Mugging", shortTitle: "The Mugging", date: "13/02/2003" },
+					{ number: "9x16", title: "The One With The Boob Job", shortTitle: "The Boob Job", date: "20/02/2003" },
+					{ number: "9x17", title: "The One With The Memorial Service", shortTitle: "The Memorial Service", date: "13/03/2003" },
+					{ number: "9x18", title: "The One With The Lottery", shortTitle: "The Lottery", date: "03/04/2003" },
+					{ number: "9x19", title: "The One With Rachel's Dream", shortTitle: "Rachel's Dream", date: "17/04/2003" },
+					{ number: "9x20", title: "The One With The Soap Opera Party", shortTitle: "The Soap Opera Party", date: "24/04/2003" },
+					{ number: "9x21", title: "The One With The Fertility Test", shortTitle: "The Fertility Test", date: "01/05/2003" },
+					{ number: "9x22", title: "The One With The Donor", shortTitle: "The Donor", date: "08/05/2003" },
+					{ number: "9x23", title: "The One In Barbados, Part 1", shortTitle: "In Barbados I", date: "15/05/2003" },
+					{ number: "9x24", title: "The One In Barbados, Part 2", shortTitle: "In Barbados II", date: "15/05/2003" }
+					]
+				},
+				season10: {
+					title: "Temporada 10 (2003-2004)",
+					episodes: [
+					{ number: "10x01", title: "The One After Joey and Rachel Kiss", shortTitle: "Joey and Rachel Kiss", date: "25/09/2003" },
+					{ number: "10x02", title: "The One Where Ross Is Fine", shortTitle: "Ross Is Fine", date: "02/10/2003" },
+					{ number: "10x03", title: "The One With Ross's Tan", shortTitle: "Ross's Tan", date: "09/10/2003" },
+					{ number: "10x04", title: "The One With The Cake", shortTitle: "The Cake", date: "23/10/2003" },
+					{ number: "10x05", title: "The One Where Rachel's Sister Babysits", shortTitle: "Rachel's Sister Babysits", date: "30/10/2003" },
+					{ number: "10x06", title: "The One With Ross's Grant", shortTitle: "Ross's Grant", date: "06/11/2003" },
+					{ number: "10x07", title: "The One With The Home Study", shortTitle: "The Home Study", date: "13/11/2003" },
+					{ number: "10x08", title: "The One With The Late Thanksgiving", shortTitle: "The Late Thanksgiving", date: "20/11/2003" },
+					{ number: "10x09", title: "The One With The Birth Mother", shortTitle: "The Birth Mother", date: "08/01/2004" },
+					{ number: "10x10", title: "The One Where Chandler Gets Caught", shortTitle: "Chandler Gets Caught", date: "15/01/2004" },
+					{ number: "10x11", title: "The One Where The Stripper Cries", shortTitle: "The Stripper Cries", date: "05/02/2004" },
+					{ number: "10x12", title: "The One With Phoebe's Wedding", shortTitle: "Phoebe's Wedding", date: "12/02/2004" },
+					{ number: "10x13", title: "The One Where Joey Speaks French", shortTitle: "Joey Speaks French", date: "19/02/2004" },
+					{ number: "10x14", title: "The One With Princess Consuela", shortTitle: "Princess Consuela", date: "26/02/2004" },
+					{ number: "10x15", title: "The One Where Estelle Dies", shortTitle: "Estelle Dies", date: "22/04/2004" },
+					{ number: "10x16", title: "The One With Rachel's Going Away Party", shortTitle: "Rachel's Going Away Party", date: "29/04/2004" },
+					{ number: "10x17", title: "The Last One, Part 1", shortTitle: "The Last One I", date: "06/05/2004" },
+					{ number: "10x18", title: "The Last One, Part 2", shortTitle: "The Last One II", date: "06/05/2004" }
+					]
+				}
+			};			
 			
 			const seasonsContainer = document.getElementById('seasonsContainer');
 			for (let i = 1; i <= 10; i++) {
@@ -300,42 +466,42 @@
 			<div class="season-number">T${i}</div>
 			<div class="season-year">${year}</div>
 			<div class="season-episodes">${episodes}</div>
-            `;
-            seasonCard.addEventListener('click', function() {
+			`;
+			seasonCard.addEventListener('click', function() {
 			document.querySelectorAll('.season-card').forEach(card => card.classList.remove('active'));
 			this.classList.add('active');
 			loadEpisodes(this.dataset.season);
-            });
-            seasonsContainer.appendChild(seasonCard);
+			});
+			seasonsContainer.appendChild(seasonCard);
 			}
 			
 			function loadEpisodes(seasonId) {
-            const episodesContainer = document.getElementById('episodesContainer');
-            if (!friendsData[seasonId]) {
+			const episodesContainer = document.getElementById('episodesContainer');
+			if (!friendsData[seasonId]) {
 			episodesContainer.innerHTML = `<p>Dados não disponíveis para esta temporada.</p>`;
 			episodesContainer.className = 'episodes-container active';
 			return;
-            }
-            const season = friendsData[seasonId];
-            let episodesHTML = `<h2 class="season-title">${season.title}</h2>`;
-            season.episodes.forEach(episode => {
+			}
+			const season = friendsData[seasonId];
+			let episodesHTML = `<h2 class="season-title">${season.title}</h2>`;
+			season.episodes.forEach(episode => {
 			episodesHTML += `
 			<div class="episode">
 				<div class="episode-number">${episode.number}</div>
 				<div class="episode-title">
-					<a href="/series/${episode.number}.html" target="_blank">${episode.title}</a>
+					<a href="episodios/${episode.number}.html" target="_blank">${episode.title}</a>
 				</div>
 				<div class="episode-date">${episode.date}</div>
 			</div>
 			`;
-            });
-            episodesContainer.innerHTML = episodesHTML;
-            episodesContainer.className = 'episodes-container active';
+			});
+			episodesContainer.innerHTML = episodesHTML;
+			episodesContainer.className = 'episodes-container active';
 			}
 			
 			// Carregar a primeira temporada automaticamente
 			document.addEventListener("DOMContentLoaded", () => {
-            document.querySelector('.season-card')?.click();
+			document.querySelector('.season-card')?.click();
 			});
 		</script>
 	</body>
